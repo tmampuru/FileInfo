@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}File Info{% endblock %}
+
+
+{% block body %}
+<div class="row">
+  <div class="col-8">
+     <!-- Filter -->
+     <div class="form-group">
+       <label class="col-form-label" for="inputDefault">Info Filter</label>
+       <input type="text" class="form-control" placeholder="Search file details" id="inputDefault">
+     </div>
+
+     <!-- my table of results -->
+     <table class="table">
+       <tbody>
+         <tr>
+           <th>Meta Info</th>
+           <th>Actual Output</th>
+         </tr>
+         <tr>
+           <td>pic size</td>
+           <td>2px</td>
+         </tr>
+       </tbody>
+     </table>
+  </div>
+
+
+  <!--- right side column start -->
+  <div class="col-4" style="background-color: #ecf0f1; width:100%">
+    <div class="row">
+      <!-- graphs and stuff -->
+      <dl>
+        <dt>A title of the graph</dt>
+        <dd class="percentage percentage-7">
+          <span class="text">
+            IE 11: 7%
+          </span>
+        </dd>
+        <dd class="percentage percentage-20">
+          <span class="text">
+            Chrome: 20%
+          </span>
+        </dd>
+        <dd class="percentage percentage-2">
+          <span class="text">
+            Android 4.4: 2%
+          </span>
+        </dd>
+        </dl>
+      </div>
+
+  </div>
+</div>
+
+  <!-- Result from the query -->
+
+{% endblock %}
