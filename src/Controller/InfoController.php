@@ -14,8 +14,7 @@
     */
     public function index()
     {
-      // return new Response('<html><body>Hello</body></html>');
-
+      // 
       return $this->render('info/index.html.twig');
     }
   }
