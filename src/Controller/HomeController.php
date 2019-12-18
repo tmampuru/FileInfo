@@ -6,7 +6,7 @@
 
   use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-  class FileController extends AbstractController
+  class HomeController extends AbstractController
   {
     /**
       *@Route("/upload")
