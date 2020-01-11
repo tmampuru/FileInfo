@@ -1,7 +1,7 @@
 body {
   font-family: "helvetica", "Helvetica Neue", Arial !important;
 }
-.custom-form {
+form {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -29,20 +29,20 @@ form input{
   outline: none;
   opacity: 0;
 }
-form button{
+.upload{
   margin: 0;
   color: #fff;
   background: #16a085;
   border: none;
   width: 508px;
   height: 35px;
-  margin-top: -20px;
-  margin-left: -4px;
+  margin-top: 26px;
+  margin-left: -7px;
   border-radius: 4px;
   transition: all .2s ease;
   outline: none;
 }
-form button:hover{
+.upload:hover{
   background: #2C3E50;
   color: #fff;
 }
@@ -71,7 +71,7 @@ form button:active{
   border: 2px solid #2c3e50;
   border-radius: 4px;
   color: #2c3e50;
-  padding: 12px 12px;
+  padding: 6px 8px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

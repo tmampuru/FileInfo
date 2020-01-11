@@ -1,12 +1,16 @@
+{% extends 'base.html.twig' %}
 
 {% block title %}File Upload{% endblock %}
 
 
 {% block body %}
-  <form  class="custom-form" action="upload.php" method="POST">
-  <input type="file" multiple>
-  <p>Drag your files here or click in this area.</p>
-  <button type="submit">Upload</button>
-  </form>
+{{ form_start(form) }}
+    <div class="custom-form">
+        {{ form_widget(form.files) }}
+        <p>Drag your files here or click in this area.</p>
 
+        {{ form_row(form.upload) }}
+
+    </div>
+{{ form_end(form) }}
 {% endblock %}
