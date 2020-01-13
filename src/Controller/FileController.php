@@ -26,14 +26,7 @@
 
       if ($form->isSubmitted() && $form->isValid()) {
           $data = $form->getData();
-          $datass = $form->getRealPath();
-
-          $newarray = (array) $datass;
-
-          print_r($datass);
-
-          // ... perform some action, such as saving the data to the database
-
+          
         return $this->render('home/index.html.twig');
     }
 
