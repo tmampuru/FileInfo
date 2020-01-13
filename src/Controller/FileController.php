@@ -1,13 +1,16 @@
 <?php
   namespace App\Controller;
 
+  use App\Entity\Files;
+  use App\Form\ImageType;
   use Symfony\Component\HttpFoundation\Response;
   use Symfony\Component\HttpFoundation\Request;
   use Symfony\Component\Routing\Annotation\Route;
 
   use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-  use Symfony\Component\Form\Extension\Core\Type\FileType;
-  use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+  use Symfony\Component\HttpFoundation\File\Exception\FileException;
+  use Symfony\Component\HttpFoundation\File\UploadedFile;
+
 
   class FileController extends AbstractController
   {
@@ -17,28 +20,22 @@
     */
     public function new(Request $request)
     {
-      // createfrombuilder gets form factory
-      $form = $this->createFormBuilder()
-          ->add('files', FileType::class)
-          ->add('upload', SubmitType::class, array(
-            'label' => 'Upload',
-            'attr' => array('class' => 'upload')
-          ))
-          ->getForm();
+      $images = new Files();
+      $form = $this->createForm(ImageType::class, $images);
+      $form->handleRequest($request);
 
-          $form->handleRequest($request);
+      if ($form->isSubmitted() && $form->isValid()) {
+          $data = $form->getData();
+          $datass = $form->getRealPath();
 
-          if ($form->isSubmitted() && $form->isValid()) {
-              $data = $form->getData();
+          $newarray = (array) $datass;
 
-               $entityManager = $this->getDoctrine()->getManager();
-               $entityManager->persist($data);
-               $entityManager->flush();
+          print_r($datass);
 
-              // ... perform some action, such as saving the data to the database
+          // ... perform some action, such as saving the data to the database
 
-            return $this->redirectToRoute('task_success');
-        }
+        return $this->render('home/index.html.twig');
+    }
 
       return $this->render('files/index.html.twig', [
           'form' => $form->createView(),
