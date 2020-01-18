@@ -13,7 +13,7 @@
   class HomeController extends AbstractController
   {
     /**
-      *@Route("/")
+      *@Route("/home")
       *
     */
     public function new(Request $request)
