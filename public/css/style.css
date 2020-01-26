@@ -1,96 +1,144 @@
 .navbar {
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
 }
-body {
-  font-family: "helvetica", "Helvetica Neue", Arial !important;
-}
-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -100px;
-  margin-left: -250px;
-  width: 500px;
-  height: 200px;
-  border: 4px dashed #1fc7a7;
-  border-radius: 4px;
-}
-form p{
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 170px;
-  color: #545454;
-  font-family: Arial;
-}
-form input{
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  outline: none;
-  opacity: 0;
-}
-.upload{
-  margin: 0;
-  color: #fff;
-  background: #16a085;
-  border: none;
-  width: 508px;
-  height: 35px;
-  margin-top: 26px;
-  margin-left: -7px;
-  border-radius: 4px;
-  transition: all .2s ease;
-  outline: none;
-}
-.upload:hover{
-  background: #2C3E50;
-  color: #fff;
-}
-form button:active{
-  border:0;
-}
-.editInput {
-  float: right;
-  width: 60%;
-  border-radius: 4px;
-  transition: all .2s ease;
-  outline: none;
-}
-.editItem {
-  float: right;
-}
-.icon {
-  width: 3.5em;
-  height: 3.5em;
-}
-.current-user {
 
+body {
+    font-family: "helvetica", "Helvetica Neue", Arial !important;
 }
+
+.custom-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -250px;
+    width: 500px;
+    height: 200px;
+    border: 4px dashed #1fc7a7;
+    border-radius: 4px;
+}
+
+.highlighted-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -250px;
+    width: 500px;
+    height: 200px;
+    border: 4px dashed #2c3e50;
+    border-radius: 4px;
+}
+
+.message {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2c3e50;
+}
+
+form p {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 170px;
+    color: #545454;
+    font-family: Arial;
+}
+
+form input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+}
+
+.upload {
+    margin: 0;
+    color: #fff;
+    background: #16a085;
+    border: none;
+    width: 508px;
+    height: 35px;
+    margin-top: 26px;
+    margin-left: -7px;
+    border-radius: 4px;
+    transition: all .2s ease;
+    outline: none;
+}
+
+.upload:hover {
+    background: #2C3E50;
+    color: #fff;
+}
+
+form button:active {
+    border: 0;
+}
+
+.editInput {
+    float: right;
+    width: 60%;
+    border-radius: 4px;
+    transition: all .2s ease;
+    outline: none;
+}
+
+.editItem {
+    float: right;
+}
+
+.icon {
+    width: 3.5em;
+    height: 3.5em;
+}
+
+.current-user {}
+
 .button {
-  background-color: #ffffff;
-  border: 2px solid #2c3e50;
-  border-radius: 4px;
-  color: #2c3e50;
-  padding: 6px 8px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
+    background-color: #ffffff;
+    border: 2px solid #2c3e50;
+    border-radius: 4px;
+    color: #2c3e50;
+    padding: 6px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
+
 .button img {
-  width: 1.5em;
-  margin-right: 12px;
+    width: 1.5em;
+    margin-right: 12px;
 }
 
 .button:hover {
-  background-color: #8e8e8e;
-  color: white;
+    background-color: #8e8e8e;
+    color: white;
 }
+
+
 /*  Graphs and stuff for info */
+
+.image-bg {
+    position: relative;
+    padding: 1rem;
+    margin: 1rem -15px 0;
+    border: solid #f8f9fa;
+    border-width: .2rem 0 0;
+}
+
+.image-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    width: 432px;
+    height: 232px;
+}
