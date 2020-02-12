@@ -4,18 +4,13 @@
 
 
 {% block body %}
-
 {{ form_start(form) }}
-    <div class="custom-form" id="highlight">
+    <div class="custom-form">
         {{ form_widget(form.images) }}
         <p>Drag your files here or click in this area.</p>
 
         {{ form_row(form.upload) }}
+
     </div>
 {{ form_end(form) }}
-
-
-    <div class="message" id="messages">
-    </div>
-
 {% endblock %}

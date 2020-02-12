@@ -10,7 +10,7 @@ $(document).ready(function() {
         $('form p').text(this.files.length + " file(s) selected");
     });
 
-    // So am trying to drag and drop and say what I did drop 
+    // So am trying to drag and drop and say what I did drop
 
     $("#highlight").on('dragenter', function(ev) {
         // Entering drop area. Highlight area
@@ -42,4 +42,8 @@ $(document).ready(function() {
         $("#highlight").removeClass("highlighted-form");
         return false;
     });
+
+    $("div.custom-form input").each(function(i) {
+  $(this).attr('image[images][]', $(this).attr('images'));
+});
 });

@@ -15,22 +15,22 @@ class ImageType extends AbstractType
        * @param FormBuilderInterface $builder
        * @param array $options
        */
-      public function buildForm(FormBuilderInterface $builder, array $options)
-      {
-          $builder
-          ->add('images', FileType::class, [
-                'multiple' => true,
-                'attr'     => [
-                    'accept' => 'image/*',
-                    'multiple' => 'multiple'
-                  ]
-                ])
-          ->add('upload', SubmitType::class, array(
-            'label' => 'Upload',
-            'attr' => array('class' => 'upload')
-          ))
-          ;
-      }
+       public function buildForm(FormBuilderInterface $builder, array $options)
+       {
+           $builder
+           ->add('images', FileType::class, [
+                 'multiple' => true,
+                 'attr'     => [
+                     'accept' => 'image/*',
+                     'multiple' => 'multiple'
+                   ]
+                 ])
+           ->add('upload', SubmitType::class, array(
+             'label' => 'Upload',
+             'attr' => array('class' => 'upload')
+           ))
+           ;
+       }
 
       public function configureOptions(OptionsResolver $resolver)
       {
